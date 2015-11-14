@@ -26,7 +26,7 @@ angular.module('starter.services', [])
     face: 'img/perry.png'
   }, {
     id: 4,
-    name: 'Mike Harrington',
+    name: 'KantiDzsí',
     lastText: 'This is wicked good ice cream.',
     face: 'img/mike.png'
   }];
