@@ -26,16 +26,19 @@
     <script src="js/routes.js"></script>
     <script src="js/services.js"></script>
     <script src="js/directives.js"></script>
+    <script src="js/navView.js"></script>
 
   </head>
   <body ng-app="app" animation="slide-left-right-ios7">
-  <div>
-    <div>
-        <ion-nav-bar class="bar-stable">
-            <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
-        </ion-nav-bar>
-        <ion-nav-view></ion-nav-view>
-    </div>
-</div>
+<!-- The nav bar that will be updated as we navigate -->
+  <ion-nav-bar class="bar-positive">
+  </ion-nav-bar>
+
+  <!-- where the initial view template will be rendered -->
+  <ion-nav-view>
+    <ion-view>
+      <ion-content>Hello!</ion-content>
+    </ion-view>
+  </ion-nav-view>
   </body>
 </html>
