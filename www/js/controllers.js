@@ -1,22 +1,26 @@
 angular.module('app.controllers', [])
   
-.controller('Ctrl', function($scope) {
+.controller('bemutatkozasCtrl', function($scope) {
 
 })
-      
+   
 .controller('mellekletekCtrl', function($scope) {
 
 })
    
-.controller('tartalomCtrl', function($scope) {
+.controller('tagokCtrl', function($scope) {
+
+})
+      
+.controller('eredmenyekCtrl', function($scope) {
 
 })
    
-.controller('kutatóCsoportCtrl', function($scope) {
+.controller('eredmenyek2Ctrl', function($scope) {
 
 })
    
-.controller('kapcsolatCtrl', function($scope) {
+.controller('palyazatCtrl', function($scope) {
 
 })
  

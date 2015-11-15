@@ -10,26 +10,22 @@ angular.module('app.routes', [])
     
       
         
-    .state('', {
-      url: '/front',
-      templateUrl: 'templates/.html',
-      controller: 'Ctrl'
+    .state('tabsController.bemutatkozas', {
+      url: '/bemutatkozas',
+      views: {
+        'tab1': {
+          templateUrl: 'templates/bemutatkozas.html',
+          controller: 'bemutatkozasCtrl'
+        }
+      }
     })
         
       
     
       
-    .state('2', {
-      url: '/tabs',
-      abstract:true,
-      templateUrl: 'templates/2.html'
-    })
-      
-    
-      
         
-    .state('2.mellekletek', {
-      url: '/tartalom',
+    .state('tabsController.mellekletek', {
+      url: '/mellekletek',
       views: {
         'tab2': {
           templateUrl: 'templates/mellekletek.html',
@@ -42,26 +38,12 @@ angular.module('app.routes', [])
     
       
         
-    .state('2.tartalom', {
-      url: '/contents',
-      views: {
-        'tab1': {
-          templateUrl: 'templates/tartalom.html',
-          controller: 'tartalomCtrl'
-        }
-      }
-    })
-        
-      
-    
-      
-        
-    .state('2.kutatóCsoport', {
-      url: '/thecrew',
+    .state('tabsController.tagok', {
+      url: '/tagok',
       views: {
         'tab3': {
-          templateUrl: 'templates/kutatóCsoport.html',
-          controller: 'kutatóCsoportCtrl'
+          templateUrl: 'templates/tagok.html',
+          controller: 'tagokCtrl'
         }
       }
     })
@@ -69,21 +51,45 @@ angular.module('app.routes', [])
       
     
       
+    .state('tabsController', {
+      url: '/page1',
+      abstract:true,
+      templateUrl: 'templates/tabsController.html'
+    })
+      
+    
+      
         
-    .state('2.kapcsolat', {
-      url: '/contacts',
-      views: {
-        'tab8': {
-          templateUrl: 'templates/kapcsolat.html',
-          controller: 'kapcsolatCtrl'
-        }
-      }
+    .state('eredmenyek', {
+      url: '/melleklet1',
+      templateUrl: 'templates/eredmenyek.html',
+      controller: 'eredmenyekCtrl'
+    })
+        
+      
+    
+      
+        
+    .state('eredmenyek2', {
+      url: '/melleklet2',
+      templateUrl: 'templates/eredmenyek2.html',
+      controller: 'eredmenyek2Ctrl'
+    })
+        
+      
+    
+      
+        
+    .state('palyazat', {
+      url: '/palyazat',
+      templateUrl: 'templates/palyazat.html',
+      controller: 'palyazatCtrl'
     })
         
       
     ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/front');
+  $urlRouterProvider.otherwise('/page1/tagok');
 
 });
