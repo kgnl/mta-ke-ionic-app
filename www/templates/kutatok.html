@@ -1,0 +1,9 @@
+<ion-view view-title="Kutatók">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="kutato in kutatok" href="#/app/kutatok/{{kutato.id}}">
+        {{kutato.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
