@@ -64,6 +64,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('KutatoCtrl', function($scope, $stateParams) {
+	$scope.kutatoId = $stateParams.kutatoId
 })
 
 ;
