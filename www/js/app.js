@@ -135,7 +135,29 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material'])
         controller: 'PlaylistCtrl'
       }
     }
-  });
+  })
+
+    /*
+    Eredmények teszt linkek, kesobb torolhetoek
+   */
+  
+  .state('app.eredmenyek1', {
+      url: '/eredmenyek1',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/eredmenyek1.html'
+        }
+      }
+    })
+  .state('app.eredmenyek2', {
+      url: '/eredmenyek2',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/eredmenyek2.html'
+        }
+      }
+    }); // eredmenyek vége -> ;  
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/bemutatkozas');
 });
