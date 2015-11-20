@@ -57,9 +57,9 @@ angular.module('starter.controllers', [])
 
 .controller('KutatokCtrl', function($scope) {
   $scope.kutatok = [
-    { title: 'Kutatócsoport tagjai 1996-2012 között...', id: 1 },
-    { title: 'Kutatócsoport jelenlegi tagjai (2012-től)...', id: 2 },
-    { title: 'A munkaterv végrehajtása során a pályázóval együttműködő, TKI állományba nem kerülő kutatók...', id: 3 }
+    { title: 'Kutatócsoport tagjai 1996-2012 között', id: 1 },
+    { title: 'Kutatócsoport jelenlegi tagjai (2012-től)', id: 2 },
+    { title: 'A munkaterv végrehajtása során a pályázóval együttműködő, TKI állományba nem kerülő kutatók', id: 3 }
   ];
 })
 
