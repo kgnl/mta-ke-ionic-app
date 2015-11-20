@@ -56,7 +56,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material'])
     url: '/kutatok/:kutatoId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/kutato.html',
+        templateUrl: function ($stateParams){
+						return 'templates/kutatok/kutatokLista' + $stateParams.kutatoId + '.html' ;
+		},
         controller: 'KutatoCtrl'
       }
     }
