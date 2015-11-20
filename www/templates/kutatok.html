@@ -1,9 +1,10 @@
 <ion-view view-title="Kutatók">
-  <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="kutato in kutatok" href="#/app/kutatok/{{kutato.id}}">
-        {{kutato.title}}
-      </ion-item>
-    </ion-list>
-  </ion-content>
+    <ion-content padding="true" class="has-header">
+        <h3>A kutatócsoport tagjai 1996-2012 között:</h3>
+        <ion-list>
+            <ion-item class="list card" ng-repeat="kutato in kutatok" href="#/app/kutatok/{{kutato.id}}">
+                {{kutato.title}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
 </ion-view>
