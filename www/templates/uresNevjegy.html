@@ -1,0 +1,13 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Névjegy</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeNevjegy()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+	<div ng-if='name!==undefined'>
+		<div ng-include=includeNevjegy(name)></div>
+	</div>
+  </ion-content>
+</ion-modal-view>

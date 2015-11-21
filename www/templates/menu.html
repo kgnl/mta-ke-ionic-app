@@ -19,11 +19,14 @@
                 <ion-item menu-close href="#/app/bemutatkozas">
                     Bemutatkozás
                 </ion-item>
+				<ion-item menu-close href="#/app/palyazat">
+                    Pályázat
+                </ion-item>
+				<ion-item menu-close href="#/app/kutatas">
+                    Kutatás
+                </ion-item>
                 <ion-item menu-close href="#/app/kutatok">
                     Kutatók
-                </ion-item>
-                <ion-item menu-close href="#/app/kutatas">
-                    Kutatás
                 </ion-item>
                 <ion-item menu-close href="#/app/publikaciok">
                     Publikációk
@@ -31,7 +34,7 @@
                 <ion-item menu-close href="#/app/partnerek">
                     Partnerek
                 </ion-item>
-                <ion-item menu-close href="#/app/kapcsolat">
+                <ion-item menu-close ng-click="showNevjegy('ProfDrKovacsMelinda')">
                     Kapcsolat
                 </ion-item>
                 <!-- START teszt menupontok -->
@@ -41,10 +44,8 @@
                 <ion-item menu-close href="#/app/eredmenyek2">
                     Eredmenyek2
                 </ion-item>
-                <ion-item menu-close href="#/app/palyazat">
-                    Eredmenyek2
-                </ion-item>
-                <!-- END teszt menupontok -->
+                
+                <!-- END teszt menupontok -->				
                 <ion-item menu-close ng-click="login()">
                     Login
                 </ion-item>

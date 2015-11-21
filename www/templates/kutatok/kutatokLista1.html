@@ -3,102 +3,28 @@
         <div>
             <h4>A kutatócsoport jelenlegi tagjai<br/>(2012-től)</h4>
         </div>
-        <ion-list>
-            <ion-item class="list card" padding="true">
-                <div class="item item-body">
-                    <a class="item item-text-wrap item-thumbnail-left" href="#">
-                        <img src="img/drkovacsmelinda.jpg">
-                        <h2>Prof. Dr. Kovács Melinda</h2>
-                        <h3>állatorvos<br/>
-                        egyetemi tanár, kutatócsoport vezető</h3>
-                    </a>
-                    <ul>
-                        <li>Tudományos fokozat: MTA levelező tagja</li>
-                        <li>E-mail: kovacs.melinda@ke.hu</li>
-                    </ul>
-                </div>
-            </ion-item>
-            <ion-item class="list card" padding="true">
-                <div class="item item-body">
-                    <a class="item item-text-wrap item-thumbnail-left" href="#">
-                        <img src="img/kut1/NoPhoto.jpg">
-                        <h2>Dr. Szabó-Fodor Judit</h2>
-                        <h3>agrármérnök,<br/>
-                        tudományos munkatárs</h3>
-                    </a>
-                    <ul>
-                        <li>Tudományos fokozat: PhD</li>
-                        <li>E-mail: fodor.judit@ke.hu</li>
-                    </ul>
-                </div>
-            </ion-item>
-            <ion-item class="list card" padding="true">
-                <div class="item item-body">
-                    <a class="item item-text-wrap item-thumbnail-left" href="#">
-                        <img src="img/kut1/NoPhoto.jpg">
-                        <h2>Dr. D’Costa Lilla</h2>
-                        <h3>analitikus kémikus,<br/>
-                        tudományos segédmunkatárs</h3>
-
-                    </a>
-                      <ul>
-                        <li>Tudományos fokozat: PhD</li>
-                        <li>E-mail: zandoki.erika@gmail.com</li>
-                    </ul>
-                </div>
-            </ion-item>
-            <ion-item class="list card" padding="true">
-                <div class="item item-body">
-                    <a class="item item-text-wrap item-thumbnail-left" href="#">
-                        <img src="img/kut1/NoPhoto.jpg">
-                        <h2>Dr. Baloghné Dr. Zándoki Erika</h2>
-                        <h3>agrármérnök,<br/>
-                        tudományos munkatárs</h3>
-                    </a>
-                    <ul>
-                        <li>Tudományos fokozat: PhD</li>
-                        <li>E-mail: fodor.judit@ke.hu</li>
-                    </ul>
-                </div>
-            </ion-item>
-            <ion-item class="list card" padding="true">
-                <div class="item item-body">
-                    <a class="item item-text-wrap item-thumbnail-left" href="#">
-                        <img src="img/kut1/NoPhoto.jpg">
-                        <h2>Kócsó Dániel</h2>                       
-                        <b>biológus, tudományos segédmunkatárs</b>
-                    </a>
-                    <ul>
-                        <li>Tudományos fokozat: PhD hallgató</li>
-                        <li>E-mail: kocso.daniel@ke.hu</li>
-                    </ul>
-                </div>
-            </ion-item>
-            <ion-item class="list card" padding="true">
-                <div class="item item-body">
-                    <a class="item item-text-wrap item-thumbnail-left" href="#">
-                        <img src="img/kut1/NoPhoto.jpg">
-                        <h2>Dr. Bors István</h2>
-                        <b>kémikus, tudományos segédmunkatárs</b>
-                    </a>
-                    <ul>
-                        <li>Tudományos fokozat: PhD</li>
-                        <li>Megjegyzés: 2015.02.01-2015.10.15. között</li>
-                    </ul>
-                </div>
-            </ion-item>
-            <ion-item class="list card" padding="true">
-                <div class="item item-body">
-                    <a class="item item-text-wrap item-thumbnail-left" href="#">
-                        <img src="img/kut1/NoPhoto.jpg">
-                        <h2>Konyáriné Takács Anna</h2>
-                        <b>vegyésztechnikus</b>
-                    </a>
-                    <ul>
-                        <li>Megjegyzés: 2013.07.01-2015.01.31. között</li>
-                    </ul>
-                </div>
-            </ion-item>
-        </ion-list>
+		<div class="list">
+            <div class="item item-icon-left" ng-click="showNevjegy('ProfDrKovacsMelinda')">
+                <i class="icon ion-person"></i> Prof. Dr. Kovács Melinda
+            </div>
+            <div class="item item-icon-left" ng-click="showNevjegy('DrSzaboFodorJudit')">
+                <i class="icon ion-person"></i> Dr. Szabó-Fodor Judit
+            </div>
+            <div class="item item-icon-left" ng-click="showNevjegy('DrDCostaLilla')">
+                <i class="icon ion-person"></i> Dr. D’Costa Lilla
+            </div>
+            <div class="item item-icon-left" ng-click="showNevjegy('DrBaloghneDrZandokiErika')">
+                <i class="icon ion-person"></i> Dr. Baloghné Dr. Zándoki Erika
+            </div>
+            <div class="item item-icon-left" ng-click="showNevjegy('KocsoDaniel')">
+                <i class="icon ion-person"></i> Kócsó Dániel
+            </div>
+            <div class="item item-icon-left" ng-click="showNevjegy('DrBorsIstvan')">
+                <i class="icon ion-person"></i> Dr. Bors István
+            </div>
+            <div class="item item-icon-left" ng-click="showNevjegy('KonyarineTakacsAnna')">
+                <i class="icon ion-person"></i> Konyáriné Takács Anna
+            </div>
+        </div>
     </ion-content>
 </ion-view>
