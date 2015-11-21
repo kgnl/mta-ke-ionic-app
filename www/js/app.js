@@ -156,7 +156,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material'])
           templateUrl: 'templates/eredmenyek2.html'
         }
       }
-    }); // eredmenyek vége -> ;  
+    })
+  .state('app.palyazat', {
+      url: '/palyazat',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/palyazat.html'
+        }
+      }
+    })
+    ; // eredmenyek vége -> ;  
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/bemutatkozas');
