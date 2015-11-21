@@ -23,6 +23,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material'])
   });
 })
 
+.config(function($ionicConfigProvider) {
+    $ionicConfigProvider.backButton.text('').icon('ion-ios-arrow-back');
+})
+
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
@@ -68,7 +72,28 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material'])
     url: '/kutatas',
     views: {
       'menuContent': {
-        templateUrl: 'templates/kutatas.html'
+        templateUrl: 'templates/kutatas.html',
+		controller: 'KutatasCtrl'
+      }
+    }
+  })
+  
+  .state('app.eredmenyek1990_2011', {
+    url: '/eredmenyek/eredmenyek1990_2011',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/eredmenyek/eredmenyek1990_2011.html',
+		controller: 'Eredmenyek1Ctrl'
+      }
+    }
+  })
+  
+  .state('app.eredmenyek2012_2015', {
+    url: '/eredmenyek/eredmenyek2012_2015',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/eredmenyek/eredmenyek2012_2015.html',
+		controller: 'Eredmenyek2Ctrl'
       }
     }
   })
@@ -100,63 +125,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material'])
     }
   })
    
-  .state('app.search', {
-    url: '/search',
+  .state('app.kereses', {
+    url: '/kereses',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/kereses.html'
       }
     }
   })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
-  })
-
-    /*
-    Eredmények teszt linkek, kesobb torolhetoek
-   */
   
-  .state('app.eredmenyek1', {
-      url: '/eredmenyek1',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/eredmenyek1.html'
-        }
-      }
-    })
-  .state('app.eredmenyek2', {
-      url: '/eredmenyek2',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/eredmenyek2.html'
-        }
-      }
-    })
   .state('app.palyazat', {
       url: '/palyazat',
       views: {
@@ -166,8 +143,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material'])
         }
       }
     })
-    ; // eredmenyek vége -> ;  
-
+    ;
+	
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/bemutatkozas');
   
