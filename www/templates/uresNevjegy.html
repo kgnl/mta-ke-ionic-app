@@ -1,0 +1,13 @@
+<ion-modal-view>
+<ion-header-bar>
+    <a class="item item-icon-right" ng-click="closeNevjegy()">
+    <i class="icon ion-android-close"></i>
+    <h3>Névjegy</h3>
+  </a>
+  </ion-header-bar>
+  <ion-content>
+	<div ng-if='name!==undefined'>
+		<div ng-include=includeNevjegy(name)></div>
+	</div>
+  </ion-content>
+</ion-modal-view>
