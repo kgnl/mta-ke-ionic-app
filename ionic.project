@@ -1,6 +1,6 @@
 {
   "name": "v03",
-  "app_id": "",
+  "app_id": "7d1f7328",
   "gulpStartupTasks": [
     "sass",
     "watch"
@@ -8,9 +8,5 @@
   "watchPatterns": [
     "www/**/*",
     "!www/lib/**/*"
-  ],
-  "gulpStartupTasks": [
-  "sass", 
-  "watch"
   ]
 }
