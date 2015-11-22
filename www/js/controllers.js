@@ -51,6 +51,9 @@ angular.module('starter.controllers', [])
 
 })
  
+ .controller('tab1Ctrl', function($scope) {
+
+})
 
 ;
 

@@ -131,6 +131,16 @@ angular.module('app.routes', [])
         }
     })
 
+    .state('app.tab1', {
+      url: '/bemutatkozas',
+      views: {
+        'tab4': {
+          templateUrl: 'templates/bemutatkozas.html',
+          controller: 'tab1Ctrl'
+        }
+      }
+    })
+
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/tabs');
 
