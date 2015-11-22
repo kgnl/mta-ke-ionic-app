@@ -101,15 +101,6 @@ angular.module('starter.routes', [])
         }
     })
 
-    .state('app.kereses', {
-        url: '/kereses',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/kereses.html'
-            }
-        }
-    })
-
     .state('app.palyazat', {
         url: '/palyazat',
         views: {
