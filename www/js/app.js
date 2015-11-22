@@ -26,5 +26,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.routes'])
       StatusBar.styleDefault();
     }
   });
-});
+})
+;
 
