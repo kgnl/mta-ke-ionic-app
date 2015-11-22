@@ -9088,3 +9088,17 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+html {
+  font-size: 16px;
+  /* our base font size */ }
+
+body {
+  font-size: 100%;
+  /* now our em = 10px */ }
+
+h1 {
+  font-size: 3em; }
+
+h3 {
+  font-size: 2em; }
