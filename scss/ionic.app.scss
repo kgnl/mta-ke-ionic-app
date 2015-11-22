@@ -32,7 +32,17 @@ $base-font: 1em;
 html {
     font-size: 16px; /* our base font size */
 }
+
 p {
-    font-size: 110%; /* now our em = 15px */
+    margin: 0 0 10px;
+    font-size: 115%;
 }
 
+.menu .avatar {
+    height: 88px;
+    width: 88px;
+}
+
+.bar-footer {
+    height: 55px;
+}
