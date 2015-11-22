@@ -1,1 +1,17 @@
 /* Empty. Add your own CSS if you like */
+
+.positive-bg {
+	background-color: #00457C;
+}
+.bar-positive .bar{
+	background-color: #00457C;
+}
+
+.menu .avatar {
+    height: 88px;
+    width: 88px;
+}
+
+.ion-side-menu {
+	width: 50px;
+}
