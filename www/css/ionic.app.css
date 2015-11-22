@@ -9094,11 +9094,5 @@ html {
   /* our base font size */ }
 
 body {
-  font-size: 100%;
-  /* now our em = 10px */ }
-
-h1 {
-  font-size: 3em; }
-
-h3 {
-  font-size: 2em; }
+  font-size: 95%;
+  /* now our em = 15px */ }

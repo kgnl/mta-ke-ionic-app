@@ -33,12 +33,6 @@ html {
     font-size: 16px; /* our base font size */
 }
 body {
-    font-size: 100%; /* now our em = 10px */
+    font-size: 95%; /* now our em = 15px */
 }
 
-h1 {
-    font-size: $base-font*3;
-}
-h3 {
-    font-size: $base-font*2;
-}
