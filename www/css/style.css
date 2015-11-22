@@ -26,7 +26,8 @@
 }
  
 .transparent {
-    background: transparent !important;
+    background: #232323;
+    opacity: 0.90; !important;
 }
  
 .fullscreen-image {
