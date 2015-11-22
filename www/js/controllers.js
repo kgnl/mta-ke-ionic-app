@@ -45,5 +45,12 @@ angular.module('starter.controllers', [])
 .controller('Eredmenyek2Ctrl', function($scope) {
 })
 
+//	tab controllers
+
+.controller('TabsCtrl', function($scope) {
+
+})
+ 
+
 ;
 
