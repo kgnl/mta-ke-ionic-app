@@ -123,13 +123,13 @@ angular.module('starter.routes', [])
         url: '/tabs',
         views: {
             'menuContent': {
-                templateUrl: 'templates/tabs.html'
+                templateUrl: 'templates/tabs.html'  
             }
         }
     })    
     ;
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/bemutatkozas');
+    $urlRouterProvider.otherwise('/app/tabs');
 
 });
