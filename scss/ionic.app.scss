@@ -32,7 +32,8 @@ $base-font: 1em;
 html {
     font-size: 16px; /* our base font size */
 }
-p {
-    font-size: 110%; /* now our em = 15px */
-}
 
+p {
+    margin: 0 0 10px;
+    font-size: 115%;
+}

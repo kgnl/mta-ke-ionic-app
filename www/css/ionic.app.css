@@ -9094,5 +9094,5 @@ html {
   /* our base font size */ }
 
 p {
-  font-size: 110%;
-  /* now our em = 15px */ }
+  margin: 0 0 10px;
+  font-size: 115%; }
