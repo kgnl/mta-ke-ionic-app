@@ -8,6 +8,25 @@ angular.module('starter.controllers', [])
 		$scope.modal = modal;
 	});
 
+	$ionicModal.fromTemplateUrl('templates/image-popover.html', {
+    scope: $scope,
+	animation: 'slide-in-up'
+	}).then(function(modal) {
+		$scope.modal2 = modal;
+	});
+	
+	// Triggered in the modal to close it
+	$scope.closeImage = function() {
+		$scope.modal2.hide('');
+	};
+
+	// Open the modal
+	$scope.showImage = function(imageSrc) {
+		$scope.imageSrc = imageSrc;
+		$scope.modal2.show();
+	};
+	
+	
 	// Triggered in the modal to close it
 	$scope.closeNevjegy = function() {
 		$scope.modal.hide('');
