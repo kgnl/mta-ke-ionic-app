@@ -1,29 +1,30 @@
-
-<ion-tabs class="tabs-icon-top tabs-color-active-positive">
-
-  <!-- Home Tab -->
-  <ion-tab title="Bevezetés" icon-off="ion-ios-home" icon-on="ion-ios-home-outline" href="#/app/bemutatkozas">
-    <ion-nav-view name="tab-bevezetes"></ion-nav-view>
-  </ion-tab>
-
-  <!-- Kutatás Tab -->
-  <ion-tab title="Chats" icon-off="ion-ios-color-filter-outline" icon-on="ion-ios-color-filter" href="#/kutatas">
-    <ion-nav-view name="tab-kutatas"></ion-nav-view>
-  </ion-tab>
-
-  <!-- Eredmenyek Tab -->
-  <ion-tab title="Eredmények" icon-off="ion-ios-paper-outline" icon-on="ion-ios-paper" href="#/eredmenyek">
-    <ion-nav-view name="tab-eredmenyek"></ion-nav-view>
-  </ion-tab>
-
-  <!-- Kutatok Tab -->
-  <ion-tab title="Kutatók" icon-off="ion-ios-people-outline" icon-on="ion-ios-people" href="#/kutatok">
-    <ion-nav-view name="tab-kutatok"></ion-nav-view>
-  </ion-tab>
-
-    <!-- Publikaciok Tab -->
-  <ion-tab title="Publikációk" icon-off="ion-ios-copy-outline" icon-on="ion-ios-copy" href="#/publikaciok">
-    <ion-nav-view name="tab-publikaciok"></ion-nav-view>
-  </ion-tab>
-
-</ion-tabs>
+<ion-view view-title="Bemutatkozás">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <img src="img/KElogo.png" width="100%" height="auto" style="width: 100%; height: auto;" />
+        <div class="item-body" padding="true">
+            <h3>MTA-KE Mikotoxinok az Élelmiszerláncban Kutatócsoport</h3>
+            <h4>7400 Kaposvár, Guba S. u. 40.</h4>
+            <p>Az Állattenyésztési és Állathigiéniai Kutatócsoport működése az érintett témakörben 1960-as évekig nyúlik vissza, amikor a MTA céltámogatásával Kovács Ferenc akadémikus vezetésével az Állatorvostudományi Egyetemen megindult a táplálékláncba bekerülő toxikus anyagok (mikotoxinok, nehéz fémek, nitrit/nitrát, növényvédő szerek stb.) élettani veszélyeinek kísérletes munkán alapuló feltárása. Ez Magyarországon egyedülálló multidiszciplináris kutatásokat indított meg. A kutatócsoport 1990 után került a Pannon Agrártudományi Egyetem Állattenyésztési Karára (a Kaposvári Egyetem jogelőd intézményébe), ahol Kovács Ferenc akadémikus mint kutatóprofesszorként segítette a kutatási programokat. A csoport vezetését 1996-ban Horn Péter akadémikus vette át, három cikluson át sikeresen vezetve a már pályázati keretek között, több hazai és külföldi intézmény közreműködésével folyó kutatásokat. A kutatócsoport 2012-ben újjá alakult és Kovács Melinda akadémikus vezetésével, mint MTA-KE Mikotoxinok az Élelmiszerláncban Kutatócsoport működik.</p>
+        </div>
+    </ion-content>
+    <ion-footer-bar>
+        <div class="tabs tabs-stable tabs-icon-top static">
+            <a ui-sref="app.bemutatkozas" class="tab-item">
+                <i class="icon ion-ios-home-outline"></i>Bemutatkozás
+            </a>
+            <a ui-sref="app.kutatas" class="tab-item">
+                <i class="icon ion-ios-color-filter-outline"></i>Kuttás
+            </a>
+            <a ui-sref="app.eredmenyek1990_2011" class="tab-item">
+                <i class="icon ion-ios-paper-outline"></i> Eredmények
+            </a>
+            <a ui-sref="app.kutatok" class="tab-item">
+                <i class="icon ion-ios-people-outline"></i> Kutatók
+            </a>
+            <a ui-sref="app.publikaciok" class="tab-item">
+                <i class="icon ion-ios-copy-outline"></i> Publikációk
+            </a>
+        </div>
+        <div class="clearfix"></div>
+    </ion-footer-bar>
+</ion-view>
