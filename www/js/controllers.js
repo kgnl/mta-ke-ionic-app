@@ -65,4 +65,3 @@ angular.module('starter.controllers', [])
 })
 
 ;
-
