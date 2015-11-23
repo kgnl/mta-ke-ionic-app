@@ -101,24 +101,36 @@ angular.module('starter.routes', [])
         }
     })
 
-    .state('app.palyazat', {
-        url: '/palyazat',
+    //  pályázat rss - probalom
+
+    .state('app.palyazatrss', {
+        url: '/palyazatrss',
         views: {
             'menuContent': {
-                templateUrl: 'templates/palyazat.html',
-                controller: 'KutatoCtrl'
+                templateUrl: 'templates/palyazatrss.html'
             }
         }
     })
-    .state('app.tabs', {
-        url: '/tabs',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/tabs.html'  
+
+    //  pályázat rss -  END
+
+    .state('app.palyazat', {
+            url: '/palyazat',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/palyazat.html',
+                    controller: 'KutatoCtrl'
+                }
             }
-        }
-    })    
-    ;
+        })
+        .state('app.tabs', {
+            url: '/tabs',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/tabs.html'
+                }
+            }
+        });
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/tabs');
