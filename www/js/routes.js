@@ -103,13 +103,17 @@ angular.module('starter.routes', [])
 
     //  pályázat rss - probalom
 
-    .state('app.palyazatrss', {
-        url: '/palyazatrss',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/palyazatrss.html'
-            }
+    .state('app.rss', {
+      url: "//:pageId",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/palyazatrss.html",
+          controller: 'RssCtrl'
         }
+      },
+      resolve: {
+        FeedServicePromise: "FeedServiceResolver"
+      }
     })
 
     //  pályázat rss -  END
