@@ -4,6 +4,10 @@
     background-color: #00457C;
 }
 
+.positive, .positive * {
+    color: #00457C;
+}
+
 .bar-positive .bar {
     background-color: #00457C;
 }
