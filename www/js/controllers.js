@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal) {
+.controller('AppCtrl', function($scope, $ionicModal, $http) {
 
     $ionicModal.fromTemplateUrl('templates/uresNevjegy.html', {
         scope: $scope
@@ -40,7 +40,8 @@ angular.module('starter.controllers', [])
 
     $scope.includeNevjegy = function(name) {
         return 'templates/kutatok/kartyak/' + name + '.html';
-    };
+    };	
+	
 })
 
 .controller('KutatokCtrl', function($scope) {
@@ -71,7 +72,7 @@ angular.module('starter.controllers', [])
 //  FEED CONTROLLER
 // 
 
-.controller('FeedController', function($scope, $http) {
+.controller('FeedController1', function($scope, $http) {
     // init a empty scope variable 
     $scope.posts = [];
 
@@ -87,4 +88,39 @@ angular.module('starter.controllers', [])
         // pass the requested entries to the view
         $scope.posts = res.responseData.feed.entries;
     });
-});
+})
+.controller('FeedController2', function($scope, $http) {
+    // init a empty scope variable 
+    $scope.posts = [];
+
+    // set the feed url
+    var url = "http://www.ke.hu/kezdolap/kiemelt-hirek?format=feed&type=rss";
+    // set the url to google, to convert the cml feed to json
+    var google_converter = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=";
+
+    // start the request
+    var request = $http.jsonp(google_converter + encodeURIComponent(url));
+    // after the request is successful
+    request.success(function(res) {
+        // pass the requested entries to the view
+        $scope.posts = res.responseData.feed.entries;
+    });
+})
+.controller('FeedController3', function($scope, $http) {
+    // init a empty scope variable 
+    $scope.posts = [];
+
+    // set the feed url
+    var url = "http://www.palyazat.gov.hu/rssfeed.php?type=kozlemenyek";
+    // set the url to google, to convert the cml feed to json
+    var google_converter = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=";
+
+    // start the request
+    var request = $http.jsonp(google_converter + encodeURIComponent(url));
+    // after the request is successful
+    request.success(function(res) {
+        // pass the requested entries to the view
+        $scope.posts = res.responseData.feed.entries;
+    });
+})
+;

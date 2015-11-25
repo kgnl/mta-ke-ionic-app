@@ -104,27 +104,30 @@ angular.module('starter.routes', [])
     //  pályázat rss - probalom
     //  
     //  
-    .state('app.rss', {
-        url: '/rss',
+    .state('app.rss1', {
+        url: '/rss1',
         views: {
             'menuContent': {
                 templateUrl: 'templates/feeds/rss1.html',
+				controller: 'FeedController1'
             }
         }
     })
-        .state('app.rss2', {
+	.state('app.rss2', {
         url: '/rss2',
         views: {
             'menuContent': {
                 templateUrl: 'templates/feeds/rss2.html',
+				controller: 'FeedController2'
             }
         }
     })
-            .state('app.rss3', {
+	.state('app.rss3', {
         url: '/rss3',
         views: {
             'menuContent': {
                 templateUrl: 'templates/feeds/rss3.html',
+				controller: 'FeedController3'
             }
         }
     })
@@ -150,6 +153,6 @@ angular.module('starter.routes', [])
         });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/tabs');
+    $urlRouterProvider.otherwise('/app/bemutatkozas');
 
 });
