@@ -102,18 +102,31 @@ angular.module('starter.routes', [])
     })
 
     //  pályázat rss - probalom
-
+    //  
+    //  
     .state('app.rss', {
-      url: "//:pageId",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/palyazatrss.html",
-          controller: 'RssCtrl'
+        url: '/rss',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/feeds/rss1.html',
+            }
         }
-      },
-      resolve: {
-        FeedServicePromise: "FeedServiceResolver"
-      }
+    })
+        .state('app.rss2', {
+        url: '/rss2',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/feeds/rss2.html',
+            }
+        }
+    })
+            .state('app.rss3', {
+        url: '/rss3',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/feeds/rss3.html',
+            }
+        }
     })
 
     //  pályázat rss -  END
