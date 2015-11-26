@@ -1,28 +1,27 @@
-angular.module('starter.controllers', [])
+var app = angular.module('tedrssapp.controllers', []);
 
-.controller('DashCtrl', function($scope) {})
+app.controller('FeedCtrl', function ($scope, FeedService) {
+	console.log("Loading FeedCtrl");
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+	$scope.feed = FeedService;
+	$scope.feed.loadFeed();
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
-})
+	$scope.doRefresh = function () {
+		$scope.feed.loadFeed().then(function () {
+			$scope.$broadcast('scroll.refreshComplete');
+		});
+	};
+});
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
+app.controller('PostCtrl', function ($scope) {
+	console.log("Loading PostCtrl");
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
+	$scope.share = function () {
+		console.debug("Sharing post");
+	};
+
+	$scope.readMore = function () {
+		console.debug("Read more post");
+	};
+
 });

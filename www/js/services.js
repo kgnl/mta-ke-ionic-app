@@ -1,50 +1,55 @@
-angular.module('starter.services', [])
+var app = angular.module('tedrssapp.services', []);
 
-.factory('Chats', function() {
-  // Might use a resource here that returns a JSON array
+app.constant("FEED_URL", "http://feeds.feedburner.com/TEDTalks_video");
 
-  // Some fake testing data
-  var chats = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
-  }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'KantiDzsí',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
-  }];
+app.factory('FeedService', function ($http, $q, FEED_URL) {
 
-  return {
-    all: function() {
-      return chats;
-    },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
-    },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
-        }
-      }
-      return null;
-    }
-  };
+	var self = {
+		'posts': []
+	};
+
+	var parseEntry = function (entry) {
+		var media = (entry && entry.mediaGroups) ? entry.mediaGroups[0].contents[0] : {url: ''};
+		if (media.type == "video/mp4") {
+			entry.thumbnail = media.thumbnails[0].url;
+			entry.video = media.url;
+		} else {
+			entry.thumbnail = media.url;
+		}
+		entry.publishedDate = new Date(entry.publishedDate);
+	};
+
+
+	self.loadFeed = function () {
+
+		self.posts.length = 0;
+		var defer = $q.defer();
+		var params = {"v": "1.0", "callback": "JSON_CALLBACK", "num": 100, "q": FEED_URL};
+
+		$http.jsonp("http://ajax.googleapis.com/ajax/services/feed/load", {params: params})
+			.success(function (res) {
+				console.debug(res);
+
+				angular.forEach(res.responseData.feed.entries, function (entry) {
+					parseEntry(entry);
+					self.posts.push(entry);
+				});
+				defer.resolve(self.posts);
+
+			});
+
+		return defer.promise;
+	};
+
+	self.getEntry = function (link) {
+		for (var i = 0; i < self.posts.length; i++) {
+			var entry = self.posts[i];
+			if (entry.link == link) {
+				return entry;
+			}
+		}
+		return null;
+	};
+
+	return self;
 });
