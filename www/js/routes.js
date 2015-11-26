@@ -153,6 +153,6 @@ angular.module('starter.routes', [])
         });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/bemutatkozas');
+    $urlRouterProvider.otherwise('/app/tabs');
 
 });
