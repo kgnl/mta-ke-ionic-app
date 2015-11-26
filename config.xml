@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <widget id="MTA-KE.onlineprojects.hu" version="0.6.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <widget id="com.ionicframework.v03702283" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
         <name>MTA-KE</name>
-        <description>&#xD;MTA-KE Mikotoxinok az Élelmiszerláncban Kutatócsoport alkalmazás&#xD;
+        <description>&#xD; MTA-KE Mikotoxinok az Élelmiszerláncban Kutatócsoport.&#xD;
         </description>
-        <author email="info@onlineprojects.hu" href="http://www.ke.hu">&#xD; Onlineprojects.hu&#xD;
+        <author email="test@test.hu" href="http://www.ke.hu">&#xD; Ionic Framework Team&#xD;
         </author>
         <content src="index.html" />
         <access origin="*" />
