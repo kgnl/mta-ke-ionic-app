@@ -1,17 +1,26 @@
-<ion-view view-title="Események">
+<ion-view view-title="Hírek">
     <ion-pane ng-controller="FeedController1">
         <ion-content>
-            <div class="button-bar">
-                <a href="#/app/rss1" class="button"><small>Események</small></a>
-                <a href="#/app/rss2" class="button button-outline"><small>Hírek</small></a>
-                <a href="#/app/rss3" class="button button-outline"><small>Pályázatok</small></a>
+                    <div class="button-bar">
+                <a nav-clear menu-close href="#/app/rss1" class="button"><small>Hírek</small></a>
+                <a nav-clear menu-close href="#/app/rss2" class="button button-outline"><small>Egyetem</small></a>
+                <a nav-clear menu-close href="#/app/rss3" class="button button-outline"><small>Pályázatok</small></a>
             </div>
-            <ion-refresher pulling-text="Frissítés" on-refresh="doRefresh()">
-            </ion-refresher>
-            <ion-list>
-                <ion-item ng-repeat="post in posts">
-                    <h2>{{post.title}}</h2> {{post.content}}
-                </ion-item>
-            </ion-list>
+            <div class="item-body" padding="true">
+                <h4>2015. november 17-18-19.</h4>
+                <p>A Kaposvári Egyetem TÁMOP-4.2.2.D-15/1/KONV-2015-0025 azonosító számú projektjében „Kutatócsoport létrehozása, kutatók alkalmazása, illetve megbízása, valamint vállalati szektor kutatóinak bevonásának technikája” tárgyú, 3 napos Interaktív Workshop kerül lebonyolításra a Kaposvári Egyetemen. A Workshop célja, a kutatás-fejlesztés megvalósításához szükséges humánerőforrás fejlesztése; a felsőoktatási intézményekben működő, több tudományterületet lefedő kutatói teamek felkészítése a nemzetközi programokban való részvételre; A kutatási projektek megvalósításához kapcsolódó előkészítési és felkészülési tevékenységek elősegítése, megerősítése és a kapcsolódó kutatás menedzsment kapacitások fejlesztése; A fiatal kutatók bevonása nemzetközi kutatási projektekbe.</p>
+                <h4>2015. november 30.</h4>
+                <p>A Kaposvári Egyetem TÁMOP-4.2.2.D-15/1/KONV-2015-0025 azonosító számú, „Mikotoxin szennyeződés megelőzésére és eltávolítására irányuló kutatásfejlesztés a Kaposvári Egyetemen” című projektjének ünnepélyes sajtó nyilvános projektzáró rendezvényére 2015. november 30-án 9.00 órai kezdettel kerül sor a Kaposvári Egyetem rektori tanácstermében. A rendezvényen ismertetésre kerülnek a projekt eredményei. Minden érdeklődőt szeretettel várunk!
+</p>
+                <h4>2015. november 25.</h4>
+                <h5>Hallgatói pályaorientációs nap – Assas</h5>
+                <p>A Kaposvári Egyetem hallgatói számára pályaorientációs napot szervez az Assas Nonprofit Kft. TÁMOP-4.2.2.D-15/1/KONV-2015-0025 azonosító számú, „Mikotoxin szennyeződés megelőzésére és eltávolítására irányuló kutatásfejlesztés a Kaposvári Egyetemen” című projekt keretein belül. A fórumra meghívásra került több nevesebb cég képviselője, így a hallgatók kerekasztal beszélgetés során érdeklődhetnek a munkaerő piaci igényekről. A rendezvény 11 órakor kezdődik az oktatási
+épület, tükrös aulában. Minden érdeklődőt szeretettel várunk!
+</p>
+                <h4>2015. november 30.</h4>
+                <h5>Szakmai Workshop - Assas</h5>
+                <p>A Kaposvári Egyetemen 2015. november 30-án 11 órai kezdettel kerül megrendezésre az Assas Nonprofit Kft. által szervezett Szakmai workshop. A rendezvény témája a K+F és innovációs együttműködés, tapasztalatcsere, projekteredmények ismertetése, nemzetközi kapcsolat- és hálózatépítés, melyek szórósan kapcsolódnak a TÁMOP-4.2.2.D-15/1/KONV-2015-0025 azonosító számú projekt kutatási témáihoz.
+</p>                                                
+            </div>
         </ion-content>
     </ion-pane>

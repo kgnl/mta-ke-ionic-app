@@ -2,9 +2,9 @@
     <ion-pane ng-controller="FeedController3">
         <ion-content>
             <div class="button-bar">
-                <a href="#/app/rss1" class="button button-outline"><small>Események</small></a>
-                <a href="#/app/rss2" class="button button-outline"><small>Hírek</small></a>
-                <a href="#/app/rss3" class="button"><small>Pályázatok</small></a>
+                <a nav-clear menu-close href="#/app/rss1" class="button button-outline"><small>Hírek</small></a>
+                <a nav-clear menu-close href="#/app/rss2" class="button button-outline"><small>Egyetem</small></a>
+                <a nav-clear menu-close href="#/app/rss3" class="button"><small>Pályázatok</small></a>
             </div>
             <ion-refresher pulling-text="Frissítés" on-refresh="doRefresh()">
             </ion-refresher>

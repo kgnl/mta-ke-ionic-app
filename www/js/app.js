@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 // 'starter.routes' is found in routes.js
 
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.routes', 'ngSanitize'])
+angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 'starter.routes', 'ngSanitize'])
 
 .config(function($ionicConfigProvider) {
     $ionicConfigProvider.backButton.text('').icon('ion-ios-arrow-back');
