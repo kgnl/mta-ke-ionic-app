@@ -6,8 +6,6 @@
                 <a nav-clear menu-close href="#/app/rss2" class="button button-outline"><small>Egyetem</small></a>
                 <a nav-clear menu-close href="#/app/rss3" class="button"><small>Pályázatok</small></a>
             </div>
-            <ion-refresher pulling-text="Frissítés" on-refresh="doRefresh()">
-            </ion-refresher>
             <ion-list>
                 <ion-item ng-repeat="post in posts">
                     <h2>{{post.title}}</h2> {{post.content}}
