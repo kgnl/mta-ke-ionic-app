@@ -7,9 +7,9 @@
                 <a nav-clear menu-close href="#/app/rss3" class="button button-outline"><small>Pályázatok</small></a>
             </div>
             <ion-list>
-                <ion-item ng-repeat="post in posts">
-                    <h2>{{post.title}}</h2> {{post.content}}
-                </ion-item>
+				<ion-item class="list card" ng-repeat="post in posts" ng-click="readEntry(post)">
+					<div class="item item-body">{{post.title}}</div> 
+				</ion-item>
             </ion-list>
         </ion-content>
     </ion-pane>

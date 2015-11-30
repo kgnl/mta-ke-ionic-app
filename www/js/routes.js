@@ -13,15 +13,6 @@ angular.module('starter.routes', [])
         controller: 'AppCtrl'
     })
 
-    .state('app.bemutatkozas', {
-        url: '/bemutatkozas',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/bemutatkozas.html'
-            }
-        }
-    })
-
     .state('app.kutatok', {
         url: '/kutatok',
         views: {

@@ -26,7 +26,6 @@ angular.module('starter.controllers', [])
         $scope.modal2.show();
     };
 
-
     // Triggered in the modal to close it
     $scope.closeNevjegy = function() {
         $scope.modal.hide('');
@@ -40,7 +39,11 @@ angular.module('starter.controllers', [])
 
     $scope.includeNevjegy = function(name) {
         return 'templates/kutatok/kartyak/' + name + '.html';
-    };	
+    };
+	
+	$scope.readEntry = function(e) {
+		window.open(e.link, '_system', 'location=yes'); return false;
+	};
 	
 })
 
@@ -89,7 +92,7 @@ angular.module('starter.controllers', [])
         $scope.posts = res.responseData.feed.entries;
     });
 })
-.controller('FeedController2', function($scope, $http) {
+.controller('FeedController2', function($scope, $http, MyService) {
     // init a empty scope variable 
     $scope.posts = [];
 
