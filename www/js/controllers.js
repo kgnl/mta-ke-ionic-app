@@ -92,7 +92,7 @@ angular.module('starter.controllers', [])
         $scope.posts = res.responseData.feed.entries;
     });
 })
-.controller('FeedController2', function($scope, $http, MyService) {
+.controller('FeedController2', function($scope, $http) {
     // init a empty scope variable 
     $scope.posts = [];
 
