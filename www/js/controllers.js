@@ -97,7 +97,7 @@ angular.module('starter.controllers', [])
     $scope.posts = [];
 
     // set the feed url
-    var url = "http://www.ke.hu/kezdolap/kiemelt-hirek?format=feed";
+    var url = "http://www.ke.hu/kezdolap/hirek?format=feed";
     // set the url to google, to convert the cml feed to json
     var google_converter = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=";
 
